@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="14868" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14868"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="CBHAboutWindowController">
+            <connections>
+                <outlet property="_authorField" destination="w7B-Ci-qIb" id="BBj-qT-rwe"/>
+                <outlet property="_copyrightField" destination="f16-yS-77Q" id="eNB-Ga-p5F"/>
+                <outlet property="_iconView" destination="cH5-10-UJe" id="xap-C9-iQB"/>
+                <outlet property="_titleField" destination="QSx-me-ZFj" id="JGc-dm-jRI"/>
+                <outlet property="_versionField" destination="mmJ-21-qo2" id="rZT-Qy-Mo6"/>
+                <outlet property="_websiteButton" destination="tBA-0h-Auj" id="aty-6I-qcc"/>
+                <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <window title="About" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" animationBehavior="default" tabbingMode="disallowed" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="F0z-JX-Cv5">
+            <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
+            <windowCollectionBehavior key="collectionBehavior" fullScreenNone="YES"/>
+            <rect key="contentRect" x="196" y="240" width="550" height="300"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <value key="minSize" type="size" width="550" height="300"/>
+            <value key="maxSize" type="size" width="550" height="300"/>
+            <view key="contentView" id="se5-gp-TjO" customClass="CBHAboutColorView">
+                <rect key="frame" x="0.0" y="0.0" width="550" height="300"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="8iW-np-28B" customClass="CBHAboutColorView">
+                        <rect key="frame" x="0.0" y="0.0" width="550" height="48"/>
+                        <subviews>
+                            <box verticalHuggingPriority="750" boxType="separator" translatesAutoresizingMaskIntoConstraints="NO" id="bir-8R-a9D">
+                                <rect key="frame" x="0.0" y="45" width="550" height="5"/>
+                            </box>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="tBA-0h-Auj">
+                                <rect key="frame" x="447" y="7" width="89" height="32"/>
+                                <buttonCell key="cell" type="push" title="Website" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="pMx-bE-3xT">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="openWebsite:" target="-2" id="Tmr-vI-A8S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="bir-8R-a9D" secondAttribute="trailing" id="068-Nl-nuW"/>
+                            <constraint firstAttribute="height" constant="48" id="8WW-xZ-5eh"/>
+                            <constraint firstItem="bir-8R-a9D" firstAttribute="top" secondItem="8iW-np-28B" secondAttribute="top" id="9CT-Ws-IlB"/>
+                            <constraint firstItem="tBA-0h-Auj" firstAttribute="centerY" secondItem="8iW-np-28B" secondAttribute="centerY" id="AFq-gA-xLg"/>
+                            <constraint firstItem="bir-8R-a9D" firstAttribute="leading" secondItem="8iW-np-28B" secondAttribute="leading" id="UWl-Gs-aw0"/>
+                            <constraint firstAttribute="trailing" secondItem="tBA-0h-Auj" secondAttribute="trailing" constant="20" id="sjT-VU-Ntv"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="color">
+                                <color key="value" name="windowBackgroundColor" catalog="System" colorSpace="catalog"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </customView>
+                    <customView translatesAutoresizingMaskIntoConstraints="NO" id="pdc-Ai-rbK">
+                        <rect key="frame" x="0.0" y="48" width="550" height="232"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cH5-10-UJe" customClass="CBHAboutImageView">
+                                <rect key="frame" x="20" y="20" width="192" height="192"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="192" id="Dqr-jy-b5p"/>
+                                    <constraint firstAttribute="width" constant="192" id="Zfn-5C-ghv"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="AppIcon" id="YIz-nb-P9I"/>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-21-qo2">
+                                <rect key="frame" x="238" y="117" width="294" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="wTl-hN-ime"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Version 1.0" id="1d6-F5-aFn">
+                                    <font key="font" metaFont="smallSystemBold"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w7B-Ci-qIb">
+                                <rect key="frame" x="238" y="95" width="294" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="Hpd-3u-TGc"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Designed &amp; Written by Chris Huxtable" id="7Py-f5-Xns">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="f16-yS-77Q">
+                                <rect key="frame" x="238" y="20" width="294" height="14"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="Sp0-N8-cUk"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Copyright © 2019 Chris Huxtable. All rights reserved." id="jIu-CB-wnh">
+                                    <font key="font" metaFont="smallSystem"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QSx-me-ZFj">
+                                <rect key="frame" x="238" y="139" width="294" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="290" id="m7C-j1-Amj"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="App Name" id="AK3-qm-oSr">
+                                    <font key="font" metaFont="system" size="28"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="cH5-10-UJe" secondAttribute="bottom" constant="20" id="6lN-af-RNA"/>
+                            <constraint firstAttribute="trailing" secondItem="mmJ-21-qo2" secondAttribute="trailing" constant="20" id="AMv-fy-fGi"/>
+                            <constraint firstItem="cH5-10-UJe" firstAttribute="top" secondItem="pdc-Ai-rbK" secondAttribute="top" constant="20" id="C0t-ZL-4RG"/>
+                            <constraint firstItem="QSx-me-ZFj" firstAttribute="top" secondItem="pdc-Ai-rbK" secondAttribute="top" constant="60" id="KWc-1O-1PF"/>
+                            <constraint firstItem="mmJ-21-qo2" firstAttribute="top" secondItem="QSx-me-ZFj" secondAttribute="bottom" constant="8" id="RO9-1g-doy"/>
+                            <constraint firstAttribute="bottom" secondItem="f16-yS-77Q" secondAttribute="bottom" constant="20" id="We6-aL-rOS"/>
+                            <constraint firstItem="cH5-10-UJe" firstAttribute="leading" secondItem="pdc-Ai-rbK" secondAttribute="leading" constant="20" id="ao8-ZB-5Pa"/>
+                            <constraint firstAttribute="trailing" secondItem="QSx-me-ZFj" secondAttribute="trailing" constant="20" id="bj8-p3-Uzi"/>
+                            <constraint firstItem="w7B-Ci-qIb" firstAttribute="top" secondItem="mmJ-21-qo2" secondAttribute="bottom" constant="8" id="hef-7w-RaK"/>
+                            <constraint firstAttribute="trailing" secondItem="w7B-Ci-qIb" secondAttribute="trailing" constant="20" id="hvO-MZ-FX2"/>
+                            <constraint firstAttribute="trailing" secondItem="f16-yS-77Q" secondAttribute="trailing" constant="20" id="rc8-6s-HaM"/>
+                        </constraints>
+                    </customView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="pdc-Ai-rbK" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="IJ7-gy-fJQ"/>
+                    <constraint firstItem="8iW-np-28B" firstAttribute="leading" secondItem="se5-gp-TjO" secondAttribute="leading" id="OlF-WD-nSP"/>
+                    <constraint firstItem="8iW-np-28B" firstAttribute="top" secondItem="pdc-Ai-rbK" secondAttribute="bottom" id="TIy-pv-GWH"/>
+                    <constraint firstAttribute="trailing" secondItem="pdc-Ai-rbK" secondAttribute="trailing" id="ZYY-TJ-R8b"/>
+                    <constraint firstAttribute="bottom" secondItem="8iW-np-28B" secondAttribute="bottom" id="bNf-gb-S8i"/>
+                    <constraint firstAttribute="trailing" secondItem="8iW-np-28B" secondAttribute="trailing" id="jKw-dB-LrP"/>
+                    <constraint firstItem="pdc-Ai-rbK" firstAttribute="top" secondItem="se5-gp-TjO" secondAttribute="top" constant="20" id="vuh-yL-u8h"/>
+                </constraints>
+                <userDefinedRuntimeAttributes>
+                    <userDefinedRuntimeAttribute type="color" keyPath="color">
+                        <color key="value" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </userDefinedRuntimeAttribute>
+                </userDefinedRuntimeAttributes>
+            </view>
+            <connections>
+                <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
+            </connections>
+            <point key="canvasLocation" x="140" y="158"/>
+        </window>
+    </objects>
+    <resources>
+        <image name="AppIcon" width="128" height="128"/>
+    </resources>
+</document>
