@@ -1,4 +1,4 @@
-//  CBHAboutColorView.m
+//  _CBHAboutColorView.m
 //  CBHAboutWindow
 //
 //  Created by Christian Huxtable <chris@huxtable.ca>, April 2019.
@@ -16,7 +16,7 @@
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#import "CBHAboutColourView.h"
+#import "_CBHAboutColourView.h"
 
 
 NS_ASSUME_NONNULL_BEGIN

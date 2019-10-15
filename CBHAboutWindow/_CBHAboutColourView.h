@@ -1,4 +1,4 @@
-//  CBHAboutColorView.h
+//  _CBHAboutColorView.h
 //  CBHAboutWindow
 //
 //  Created by Christian Huxtable <chris@huxtable.ca>, April 2019.

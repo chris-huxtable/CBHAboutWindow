@@ -7,21 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		8342EC7323539B860090E7E2 /* CBHAboutImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8342EC7123539B860090E7E2 /* CBHAboutImageView.h */; };
-		8342EC7423539B860090E7E2 /* CBHAboutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342EC7223539B860090E7E2 /* CBHAboutImageView.m */; };
+		8342EC7323539B860090E7E2 /* _CBHAboutImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8342EC7123539B860090E7E2 /* _CBHAboutImageView.h */; };
+		8342EC7423539B860090E7E2 /* _CBHAboutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342EC7223539B860090E7E2 /* _CBHAboutImageView.m */; };
 		83F40E00230DA3EF00BE3CA0 /* CBHAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40DF2230DA3EF00BE3CA0 /* CBHAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F40E0C230DA40000BE3CA0 /* CBHAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E09230DA3FF00BE3CA0 /* CBHAboutWindowController.m */; };
 		83F40E0D230DA40000BE3CA0 /* CBHAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F40E0A230DA40000BE3CA0 /* CBHAboutWindow.xib */; };
 		83F40E0E230DA40000BE3CA0 /* CBHAboutWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E0B230DA40000BE3CA0 /* CBHAboutWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F40E14230DB99300BE3CA0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83F40E11230DB99300BE3CA0 /* LICENSE */; };
-		83F40E22230DDF7D00BE3CA0 /* CBHAboutColourView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E20230DDF7D00BE3CA0 /* CBHAboutColourView.m */; };
-		83F40E23230DDF7D00BE3CA0 /* CBHAboutColourView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E21230DDF7D00BE3CA0 /* CBHAboutColourView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		83F40E22230DDF7D00BE3CA0 /* _CBHAboutColourView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E20230DDF7D00BE3CA0 /* _CBHAboutColourView.m */; };
+		83F40E23230DDF7D00BE3CA0 /* _CBHAboutColourView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E21230DDF7D00BE3CA0 /* _CBHAboutColourView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		83FEA35C235523090063E519 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83FEA35E235523090063E519 /* Localizable.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		8342EC7123539B860090E7E2 /* CBHAboutImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHAboutImageView.h; sourceTree = "<group>"; };
-		8342EC7223539B860090E7E2 /* CBHAboutImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHAboutImageView.m; sourceTree = "<group>"; };
+		8342EC7123539B860090E7E2 /* _CBHAboutImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _CBHAboutImageView.h; sourceTree = "<group>"; };
+		8342EC7223539B860090E7E2 /* _CBHAboutImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _CBHAboutImageView.m; sourceTree = "<group>"; };
 		83F40DEF230DA3EF00BE3CA0 /* CBHAboutWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHAboutWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F40DF2230DA3EF00BE3CA0 /* CBHAboutWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHAboutWindow.h; sourceTree = "<group>"; };
 		83F40DF3230DA3EF00BE3CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -31,8 +31,8 @@
 		83F40E0F230DB99300BE3CA0 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		83F40E10230DB99300BE3CA0 /* CBHAboutWindow.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CBHAboutWindow.podspec; sourceTree = "<group>"; };
 		83F40E11230DB99300BE3CA0 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
-		83F40E20230DDF7D00BE3CA0 /* CBHAboutColourView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CBHAboutColourView.m; sourceTree = "<group>"; };
-		83F40E21230DDF7D00BE3CA0 /* CBHAboutColourView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CBHAboutColourView.h; sourceTree = "<group>"; };
+		83F40E20230DDF7D00BE3CA0 /* _CBHAboutColourView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CBHAboutColourView.m; sourceTree = "<group>"; };
+		83F40E21230DDF7D00BE3CA0 /* _CBHAboutColourView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CBHAboutColourView.h; sourceTree = "<group>"; };
 		83FEA35D235523090063E519 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83FEA35F235523880063E519 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		83FEA360235523900063E519 /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -77,10 +77,10 @@
 				83F40E0B230DA40000BE3CA0 /* CBHAboutWindowController.h */,
 				83F40E09230DA3FF00BE3CA0 /* CBHAboutWindowController.m */,
 				83F40E0A230DA40000BE3CA0 /* CBHAboutWindow.xib */,
-				83F40E21230DDF7D00BE3CA0 /* CBHAboutColourView.h */,
-				83F40E20230DDF7D00BE3CA0 /* CBHAboutColourView.m */,
-				8342EC7123539B860090E7E2 /* CBHAboutImageView.h */,
-				8342EC7223539B860090E7E2 /* CBHAboutImageView.m */,
+				83F40E21230DDF7D00BE3CA0 /* _CBHAboutColourView.h */,
+				83F40E20230DDF7D00BE3CA0 /* _CBHAboutColourView.m */,
+				8342EC7123539B860090E7E2 /* _CBHAboutImageView.h */,
+				8342EC7223539B860090E7E2 /* _CBHAboutImageView.m */,
 				83F40DF3230DA3EF00BE3CA0 /* Info.plist */,
 			);
 			path = CBHAboutWindow;
@@ -94,9 +94,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				83F40E0E230DA40000BE3CA0 /* CBHAboutWindowController.h in Headers */,
-				83F40E23230DDF7D00BE3CA0 /* CBHAboutColourView.h in Headers */,
+				83F40E23230DDF7D00BE3CA0 /* _CBHAboutColourView.h in Headers */,
 				83F40E00230DA3EF00BE3CA0 /* CBHAboutWindow.h in Headers */,
-				8342EC7323539B860090E7E2 /* CBHAboutImageView.h in Headers */,
+				8342EC7323539B860090E7E2 /* _CBHAboutImageView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -174,8 +174,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8342EC7423539B860090E7E2 /* CBHAboutImageView.m in Sources */,
-				83F40E22230DDF7D00BE3CA0 /* CBHAboutColourView.m in Sources */,
+				8342EC7423539B860090E7E2 /* _CBHAboutImageView.m in Sources */,
+				83F40E22230DDF7D00BE3CA0 /* _CBHAboutColourView.m in Sources */,
 				83F40E0C230DA40000BE3CA0 /* CBHAboutWindowController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -415,6 +415,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;
@@ -438,6 +439,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = NO;

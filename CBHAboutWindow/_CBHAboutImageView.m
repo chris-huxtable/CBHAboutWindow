@@ -1,4 +1,4 @@
-//  CBHAboutImageView.m
+//  _CBHAboutImageView.m
 //  CBHAboutWindow
 //
 //  Created by Christian Huxtable <chris@huxtable.ca>, October 2019.
@@ -16,7 +16,7 @@
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#import "CBHAboutImageView.h"
+#import "_CBHAboutImageView.h"
 
 
 @implementation CBHAboutImageView

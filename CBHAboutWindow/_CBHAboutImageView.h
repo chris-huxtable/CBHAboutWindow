@@ -1,4 +1,4 @@
-//  CBHAboutImageView.h
+//  _CBHAboutImageView.h
 //  CBHAboutWindow
 //
 //  Created by Christian Huxtable <chris@huxtable.ca>, October 2019.

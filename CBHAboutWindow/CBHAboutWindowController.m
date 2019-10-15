@@ -18,7 +18,7 @@
 
 #import "CBHAboutWindowController.h"
 
-#import "CBHAboutImageView.h"
+#import "_CBHAboutImageView.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
