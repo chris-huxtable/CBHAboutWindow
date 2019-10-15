@@ -3,7 +3,7 @@
 [![release](https://img.shields.io/github/release/chris-huxtable/CBHAboutWindow.svg)](https://github.com/chris-huxtable/CBHAboutWindow/releases)
 [![pod](https://img.shields.io/cocoapods/v/CBHAboutWindow.svg)](https://cocoapods.org/pods/CBHAboutWindow)
 [![licence](https://img.shields.io/badge/licence-ISC-lightgrey.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHAboutWindow/blob/master/LICENSE)
-[![coverage](https://img.shields.io/badge/coverage-0%25-brightred.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHAboutWindow)
+[![coverage](https://img.shields.io/badge/coverage-0%25-red.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHAboutWindow)
 
 A fancier about window. Designed for my ease-of-use, but flexible enough for anyone.
 
