@@ -19,7 +19,7 @@
 #import "_CBHAboutImageView.h"
 
 
-@implementation CBHAboutImageView
+@implementation _CBHAboutImageView
 
 - (BOOL)mouseDownCanMoveWindow
 {

@@ -21,7 +21,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBHAboutImageView : NSImageView
+@interface _CBHAboutImageView : NSImageView
 
 @end
 

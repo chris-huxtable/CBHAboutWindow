@@ -26,7 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CBHAboutWindowController ()
 {
 	@private
-	IBOutlet CBHAboutImageView *_iconView;
+	IBOutlet _CBHAboutImageView *_iconView;
 	IBOutlet NSTextField *_titleField;
 	IBOutlet NSTextField *_versionField;
 	IBOutlet NSTextField *_authorField;

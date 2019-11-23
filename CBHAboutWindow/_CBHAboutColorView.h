@@ -23,7 +23,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 IB_DESIGNABLE
-@interface CBHAboutColorView : NSView
+@interface _CBHAboutColorView : NSView
 
 @property (nonatomic, readwrite, nullable) IBInspectable NSColor *color;
 

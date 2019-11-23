@@ -16,12 +16,12 @@
 //  ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT OF
 //  OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
 
-#import "_CBHAboutColourView.h"
+#import "_CBHAboutColorView.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface CBHAboutColorView ()
+@interface _CBHAboutColorView ()
 {
 	NSColor * __nullable _color;
 }
@@ -30,7 +30,7 @@ NS_ASSUME_NONNULL_BEGIN
 NS_ASSUME_NONNULL_END
 
 
-@implementation CBHAboutColorView
+@implementation _CBHAboutColorView
 
 @synthesize color = _color;
 
