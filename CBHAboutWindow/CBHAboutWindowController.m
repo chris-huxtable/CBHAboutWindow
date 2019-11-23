@@ -36,12 +36,12 @@ NS_ASSUME_NONNULL_BEGIN
 	NSURL *_websiteURL;
 }
 
-#pragma mark Actions
+#pragma mark - Actions
 
 - (IBAction)openWebsite:(id)sender;
 
 
-#pragma mark Utilities
+#pragma mark - Utilities
 
 - (NSImage *)_image:(NSImage *)image scaledToSize:(NSSize)size;
 
@@ -53,7 +53,7 @@ NS_ASSUME_NONNULL_END
 @implementation CBHAboutWindowController
 
 
-#pragma mark Factories
+#pragma mark - Factories
 
 + (instancetype)controller
 {
@@ -61,7 +61,7 @@ NS_ASSUME_NONNULL_END
 }
 
 
-#pragma mark Overrides
+#pragma mark - Overrides
 
 - (void)awakeFromNib
 {
@@ -105,7 +105,7 @@ NS_ASSUME_NONNULL_END
 }
 
 
-#pragma mark Properties
+#pragma mark - Properties
 
 - (void)setIcon:(NSImage *)icon
 {
@@ -174,7 +174,7 @@ NS_ASSUME_NONNULL_END
 @synthesize websiteURL = _websiteURL;
 
 
-#pragma mark Actions
+#pragma mark - Actions
 
 - (IBAction)openWebsite:(id)sender
 {
@@ -183,7 +183,7 @@ NS_ASSUME_NONNULL_END
 }
 
 
-#pragma mark Utilities
+#pragma mark - Utilities
 
 - (NSImage *)_image:(NSImage *)image scaledToSize:(NSSize)size
 {

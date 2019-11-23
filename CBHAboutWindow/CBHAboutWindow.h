@@ -22,4 +22,5 @@
 FOUNDATION_EXPORT double CBHAboutWindowVersionNumber;
 FOUNDATION_EXPORT const unsigned char CBHAboutWindowVersionString[];
 
+
 #import <CBHAboutWindow/CBHAboutWindowController.h>
