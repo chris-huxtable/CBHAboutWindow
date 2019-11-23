@@ -187,16 +187,15 @@ NS_ASSUME_NONNULL_END
 
 - (NSImage *)_image:(NSImage *)image scaledToSize:(NSSize)size
 {
-	NSRect rect = NSMakeRect(0, 0, size.width, size.width);
-	NSImageRep *imageRep = [image bestRepresentationForRect:rect context:nil hints:nil];
-
 	NSImage *outImage = [[NSImage alloc] initWithSize:size];
+	NSRect rect = {NSZeroPoint, size};
 
 	[outImage lockFocus];
-	[imageRep drawInRect:rect];
+	[[image bestRepresentationForRect:rect context:nil hints:nil] drawInRect:rect];
 	[outImage unlockFocus];
 
 	return outImage;
+
 }
 
 @end
