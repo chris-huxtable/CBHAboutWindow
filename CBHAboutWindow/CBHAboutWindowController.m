@@ -28,10 +28,15 @@ NS_ASSUME_NONNULL_BEGIN
 	@private
 	IBOutlet _CBHAboutImageView *_iconView;
 	IBOutlet NSTextField *_titleField;
-	IBOutlet NSTextField *_versionField;
+	IBOutlet NSButton *_versionButton;
 	IBOutlet NSTextField *_authorField;
 	IBOutlet NSTextField *_copyrightField;
 	IBOutlet NSButton *_websiteButton;
+
+	NSString *_version;
+	NSString *_build;
+
+	BOOL _versionAndBuild;
 
 	NSURL *_websiteURL;
 }
@@ -81,17 +86,10 @@ NS_ASSUME_NONNULL_END
 	[self setIcon:[NSImage imageNamed:NSImageNameApplicationIcon]];
 	[self setTitle:[currentApplication localizedName]];
 
-	NSString *version = [info objectForKey:@"CFBundleShortVersionString"];
-	NSString *build = [info objectForKey:@"CFBundleVersion"];
-
-	NSUInteger versionLength = [version length];
-	if ( versionLength > 1 )
-	{
-		unichar lastChar = [version characterAtIndex:versionLength - 1];
-		if ( lastChar < '0' || lastChar > '9' ) { [self setVersion:version withBuild:build]; }
-		else { [self setVersion:version]; }
-	}
-	else { [self setVersion:version]; }
+	_version = [info objectForKey:@"CFBundleShortVersionString"];
+	_build = [info objectForKey:@"CFBundleVersion"];
+	_versionAndBuild = NO;
+	[self updateVersionField];
 
 	string = NSLocalizedStringFromTableInBundle(@"Designed & Written by", nil, bundle, @"CBHAboutWindowController::author");
 	[self setAuthor:[NSString stringWithFormat:@"%@ %@", string, @"Chris Huxtable"]];
@@ -131,21 +129,32 @@ NS_ASSUME_NONNULL_END
 
 - (void)setVersion:(NSString *)version
 {
-	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
-	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
-	[_versionField setStringValue:[NSString stringWithFormat:@"%@ %@", label, version]];
-}
-
-- (void)setVersion:(NSString *)version withBuild:(NSString *)build
-{
-	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
-	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
-	[_versionField setStringValue:[NSString stringWithFormat:@"%@ %@ (%@)",  label, version, build]];
+	_version = [version copy];
+	[self updateVersionField];
 }
 
 - (NSString *)version
 {
-	return [_versionField stringValue];
+	return _version;
+}
+
+- (void)setBuild:(NSString *)build
+{
+	_build = [build copy];
+	[self updateVersionField];
+}
+
+- (NSString *)build
+{
+	return _build;
+}
+
+- (void)setVersion:(NSString *)version withBuild:(NSString *)build
+{
+	_version = [version copy];
+	_build = [build copy];
+
+	[self updateVersionField];
 }
 
 
@@ -182,6 +191,12 @@ NS_ASSUME_NONNULL_END
 	[[NSWorkspace sharedWorkspace] openURL:_websiteURL];
 }
 
+- (IBAction)swapVersion:(id)sender
+{
+	_versionAndBuild = !_versionAndBuild;
+	[self updateVersionField];
+}
+
 
 #pragma mark - Utilities
 
@@ -195,7 +210,27 @@ NS_ASSUME_NONNULL_END
 	[outImage unlockFocus];
 
 	return outImage;
+}
 
+- (void)updateVersionField
+{
+	NSString *string = ( _versionAndBuild ) ? [self versionAndBuildString] : [self versionString];
+	[_versionButton setTitle:string];
+	[_versionButton setNeedsDisplay];
+}
+
+- (NSString *)versionString
+{
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
+	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
+	return [NSString stringWithFormat:@"%@ %@", label, _version];
+}
+
+- (NSString *)versionAndBuildString
+{
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
+	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
+	return [NSString stringWithFormat:@"%@ %@ (%@)", label, _version, _build];
 }
 
 @end

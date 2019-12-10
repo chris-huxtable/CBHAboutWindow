@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15505" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15505"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -12,7 +12,7 @@
                 <outlet property="_copyrightField" destination="f16-yS-77Q" id="eNB-Ga-p5F"/>
                 <outlet property="_iconView" destination="cH5-10-UJe" id="xap-C9-iQB"/>
                 <outlet property="_titleField" destination="QSx-me-ZFj" id="JGc-dm-jRI"/>
-                <outlet property="_versionField" destination="mmJ-21-qo2" id="rZT-Qy-Mo6"/>
+                <outlet property="_versionButton" destination="Oho-Fm-gTG" id="5xB-wh-Rcq"/>
                 <outlet property="_websiteButton" destination="tBA-0h-Auj" id="aty-6I-qcc"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -72,17 +72,16 @@
                                 </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="AppIcon" id="YIz-nb-P9I"/>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="mmJ-21-qo2">
-                                <rect key="frame" x="238" y="117" width="294" height="14"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="290" id="wTl-hN-ime"/>
-                                </constraints>
-                                <textFieldCell key="cell" lineBreakMode="clipping" alignment="left" title="Version 1.0" id="1d6-F5-aFn">
-                                    <font key="font" metaFont="smallSystemBold"/>
-                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Oho-Fm-gTG">
+                                <rect key="frame" x="238" y="117" width="66" height="14"/>
+                                <buttonCell key="cell" type="bevel" title="Version 1.0" bezelStyle="rounded" alignment="left" imageScaling="proportionallyDown" inset="2" id="lBj-FT-q29">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold" size="11"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="swapVersion:" target="-2" id="2JY-5y-fPE"/>
+                                </connections>
+                            </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="w7B-Ci-qIb">
                                 <rect key="frame" x="238" y="95" width="294" height="14"/>
                                 <constraints>
@@ -119,14 +118,15 @@
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="cH5-10-UJe" secondAttribute="bottom" constant="20" id="6lN-af-RNA"/>
-                            <constraint firstAttribute="trailing" secondItem="mmJ-21-qo2" secondAttribute="trailing" constant="20" id="AMv-fy-fGi"/>
                             <constraint firstItem="cH5-10-UJe" firstAttribute="top" secondItem="pdc-Ai-rbK" secondAttribute="top" constant="20" id="C0t-ZL-4RG"/>
+                            <constraint firstItem="Oho-Fm-gTG" firstAttribute="top" secondItem="QSx-me-ZFj" secondAttribute="bottom" constant="8" id="DCx-MY-RyF"/>
                             <constraint firstItem="QSx-me-ZFj" firstAttribute="top" secondItem="pdc-Ai-rbK" secondAttribute="top" constant="60" id="KWc-1O-1PF"/>
-                            <constraint firstItem="mmJ-21-qo2" firstAttribute="top" secondItem="QSx-me-ZFj" secondAttribute="bottom" constant="8" id="RO9-1g-doy"/>
+                            <constraint firstItem="w7B-Ci-qIb" firstAttribute="top" secondItem="Oho-Fm-gTG" secondAttribute="bottom" constant="8" id="PR2-gs-MKY"/>
                             <constraint firstAttribute="bottom" secondItem="f16-yS-77Q" secondAttribute="bottom" constant="20" id="We6-aL-rOS"/>
                             <constraint firstItem="cH5-10-UJe" firstAttribute="leading" secondItem="pdc-Ai-rbK" secondAttribute="leading" constant="20" id="ao8-ZB-5Pa"/>
                             <constraint firstAttribute="trailing" secondItem="QSx-me-ZFj" secondAttribute="trailing" constant="20" id="bj8-p3-Uzi"/>
-                            <constraint firstItem="w7B-Ci-qIb" firstAttribute="top" secondItem="mmJ-21-qo2" secondAttribute="bottom" constant="8" id="hef-7w-RaK"/>
+                            <constraint firstItem="Oho-Fm-gTG" firstAttribute="leading" secondItem="f16-yS-77Q" secondAttribute="leading" constant="-2" id="g5X-9H-e4J"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Oho-Fm-gTG" secondAttribute="trailing" constant="20" id="hmW-O9-1wT"/>
                             <constraint firstAttribute="trailing" secondItem="w7B-Ci-qIb" secondAttribute="trailing" constant="20" id="hvO-MZ-FX2"/>
                             <constraint firstAttribute="trailing" secondItem="f16-yS-77Q" secondAttribute="trailing" constant="20" id="rc8-6s-HaM"/>
                         </constraints>
