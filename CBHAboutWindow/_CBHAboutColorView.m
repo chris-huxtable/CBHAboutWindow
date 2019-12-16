@@ -23,6 +23,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface _CBHAboutColorView ()
 {
+	@private
+
 	NSColor * __nullable _color;
 }
 @end
@@ -41,10 +43,8 @@ NS_ASSUME_NONNULL_END
 		[_color setFill];
 		NSRectFill(dirtyRect);
 	}
-	else
-	{
-		[super drawRect:dirtyRect];
-	}
+
+	[super drawRect:dirtyRect];
 }
 
 @end
