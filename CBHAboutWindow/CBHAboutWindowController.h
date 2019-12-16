@@ -23,22 +23,44 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface CBHAboutWindowController : NSWindowController
 
-
-#pragma mark Factories
+#pragma mark - Factories
 
 + (instancetype)controller;
 
 
-#pragma mark Properties
+#pragma mark - Icon and Title
 
-@property (nonatomic, readwrite, strong) NSImage *icon;
+@property (nonatomic, readwrite, copy) NSImage *icon;
+@property (nonatomic, readwrite, copy) NSString *title;
 
-@property (nonatomic, readwrite, strong) NSString *title;
-@property (nonatomic, readwrite, strong) NSString *version;
-@property (nonatomic, readwrite, strong) NSString *author;
-@property (nonatomic, readwrite, strong) NSString *copyright;
 
-@property (nonatomic, readwrite, strong) NSURL *websiteURL;
+#pragma mark - Version and Build
+
+@property (nonatomic, readwrite, copy) NSString *version;
+@property (nonatomic, readwrite, copy) NSString *build;
+
+- (void)setVersion:(NSString *)version andBuild:(NSString *)build;
+
+@property (nonatomic, readonly) NSString *versionString;
+@property (nonatomic, readonly) NSString *versionAndBuildString;
+
+@property (nonatomic, readwrite) BOOL shouldShowVersionAndBuild;
+
+
+#pragma mark - Author and Copyright
+
+@property (nonatomic, readwrite, copy) NSString *author;
+@property (nonatomic, readwrite, copy) NSString *copyright;
+
+
+#pragma mark - Website
+
+@property (nonatomic, readwrite, copy) NSURL *websiteURL;
+
+
+#pragma mark - Unavailable
+
+- (instancetype)initWithCoder:(NSCoder *)coder NS_UNAVAILABLE;
 
 @end
 

@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface CBHAboutWindowController ()
 {
 	@private
+
 	IBOutlet _CBHAboutImageView *_iconView;
 	IBOutlet NSTextField *_titleField;
 	IBOutlet NSButton *_versionButton;
@@ -33,10 +34,15 @@ NS_ASSUME_NONNULL_BEGIN
 	IBOutlet NSTextField *_copyrightField;
 	IBOutlet NSButton *_websiteButton;
 
+	NSImage *_icon;
+	NSString *_title;
+
 	NSString *_version;
 	NSString *_build;
+	BOOL _shouldShowVersionAndBuild;
 
-	BOOL _versionAndBuild;
+	NSString *_author;
+	NSString *_copyright;
 
 	NSURL *_websiteURL;
 }
@@ -66,14 +72,45 @@ NS_ASSUME_NONNULL_END
 }
 
 
-#pragma mark - Overrides
+#pragma mark - Initialization
 
-- (void)awakeFromNib
+- (instancetype)initWithWindow:(NSWindow *)window
 {
-	[super awakeFromNib];
+	if ( (self = [super initWithWindow:window]) )
+	{
+		[self setup];
+	}
 
-	NSRunningApplication *currentApplication = [NSRunningApplication currentApplication];
+	return self;
+}
+
+
+#pragma mark - Life Cycle
+
+- (void)setup
+{
 	NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
+
+	_icon = [self _image:[NSImage imageNamed:NSImageNameApplicationIcon] scaledToSize:NSMakeSize(192, 192)];
+	_title = [[NSRunningApplication currentApplication] localizedName];
+
+	_version = [info objectForKey:@"CFBundleShortVersionString"];
+	_build = [info objectForKey:@"CFBundleVersion"];
+	_shouldShowVersionAndBuild = NO;
+
+	NSString *string = NSLocalizedStringFromTableInBundle(@"Designed & Written by", nil, bundle, @"CBHAboutWindowController::author");
+	_author = [NSString stringWithFormat:@"%@ %@", string, @"Chris Huxtable"];
+
+	string = NSLocalizedStringFromTableInBundle(@"Copyright", nil, bundle, @"CBHAboutWindowController::copyright");
+	NSString *reserved = NSLocalizedStringFromTableInBundle(@"All rights reserved", nil, bundle, @"CBHAboutWindowController::reserved");
+	_copyright = [NSString stringWithFormat:@"%@ %@. %@.", string, @"© 2019 Chris Huxtable", reserved];
+
+	_websiteURL = [NSURL URLWithString:@"https://huxtable.ca/apps"];
+}
+
+- (void)windowDidLoad
+{
 	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
 
 	NSWindow *window = [self window];
@@ -81,51 +118,43 @@ NS_ASSUME_NONNULL_END
 	[window setMovableByWindowBackground:YES];
 
 	NSString *string = NSLocalizedStringFromTableInBundle(@"About %@", nil, bundle, @"CBHAboutWindowController::window.title");
-	[window setTitle:[NSString stringWithFormat:string, [currentApplication localizedName]]];
+	[window setTitle:[NSString stringWithFormat:string, _title]];
 
-	[self setIcon:[NSImage imageNamed:NSImageNameApplicationIcon]];
-	[self setTitle:[currentApplication localizedName]];
+	[_iconView setImage:_icon];
+	[_titleField setStringValue:_title];
 
-	_version = [info objectForKey:@"CFBundleShortVersionString"];
-	_build = [info objectForKey:@"CFBundleVersion"];
-	_versionAndBuild = NO;
 	[self updateVersionField];
 
-	string = NSLocalizedStringFromTableInBundle(@"Designed & Written by", nil, bundle, @"CBHAboutWindowController::author");
-	[self setAuthor:[NSString stringWithFormat:@"%@ %@", string, @"Chris Huxtable"]];
-
-	string = NSLocalizedStringFromTableInBundle(@"Copyright", nil, bundle, @"CBHAboutWindowController::copyright");
-	NSString *reserved = NSLocalizedStringFromTableInBundle(@"All rights reserved", nil, bundle, @"CBHAboutWindowController::reserved");
-	[self setCopyright:[NSString stringWithFormat:@"%@ %@. %@.", string, @"© 2019 Chris Huxtable", reserved]];
+	[_authorField setStringValue:_author];
+	[_copyrightField setStringValue:_copyright];
 
 	[_websiteButton setTitle:NSLocalizedStringFromTableInBundle(@"Website", nil, bundle, @"CBHAboutWindowController::website")];
-	[self setWebsiteURL:[NSURL URLWithString:@"https://huxtable.ca/apps"]];
 }
 
 
-#pragma mark - Properties
+#pragma mark - Icon and Title
+
+@synthesize icon = _icon;
 
 - (void)setIcon:(NSImage *)icon
 {
-	[_iconView setImage:[self _image:icon scaledToSize:NSMakeSize(192, 192)]];
+	_icon = [self _image:icon scaledToSize:NSMakeSize(192, 192)];
+	[_iconView setImage:_icon];
 }
 
-- (NSImage *)icon
-{
-	return [_iconView image];
-}
 
+@synthesize title = _title;
 
 - (void)setTitle:(NSString *)title
 {
-	[_titleField setStringValue:title];
+	_title = [title copy];
+	[_titleField setStringValue:_title];
 }
 
-- (NSString *)title
-{
-	return [_titleField stringValue];
-}
 
+#pragma mark - Version and Build
+
+@synthesize version = _version;
 
 - (void)setVersion:(NSString *)version
 {
@@ -133,10 +162,8 @@ NS_ASSUME_NONNULL_END
 	[self updateVersionField];
 }
 
-- (NSString *)version
-{
-	return _version;
-}
+
+@synthesize build = _build;
 
 - (void)setBuild:(NSString *)build
 {
@@ -144,12 +171,8 @@ NS_ASSUME_NONNULL_END
 	[self updateVersionField];
 }
 
-- (NSString *)build
-{
-	return _build;
-}
 
-- (void)setVersion:(NSString *)version withBuild:(NSString *)build
+- (void)setVersion:(NSString *)version andBuild:(NSString *)build
 {
 	_version = [version copy];
 	_build = [build copy];
@@ -158,43 +181,71 @@ NS_ASSUME_NONNULL_END
 }
 
 
+@synthesize shouldShowVersionAndBuild = _shouldShowVersionAndBuild;
+
+- (void)setShouldShowVersionAndBuild:(BOOL)flag
+{
+	if ( _shouldShowVersionAndBuild == flag ) { return; }
+	_shouldShowVersionAndBuild = flag;
+
+	[self updateVersionField];
+}
+
+
+- (NSString *)versionString
+{
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
+	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
+	return [NSString stringWithFormat:@"%@ %@", label, _version];
+}
+
+- (NSString *)versionAndBuildString
+{
+	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
+	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
+	return [NSString stringWithFormat:@"%@ %@ (%@)", label, _version, _build];
+}
+
+- (void)updateVersionField
+{
+	NSString *string = ( _shouldShowVersionAndBuild ) ? [self versionAndBuildString] : [self versionString];
+	[_versionButton setTitle:string];
+	[_versionButton setNeedsDisplay];
+}
+
+
+#pragma mark - Author and Copyright
+
+@synthesize author = _author;
+
 - (void)setAuthor:(NSString *)author
 {
-	[_authorField setStringValue:author];
+	_author = [author copy];
+	[_authorField setStringValue:_author];
 }
 
-- (NSString *)author
-{
-	return [_authorField stringValue];
-}
 
+@synthesize copyright = _copyright;
 
 - (void)setCopyright:(NSString *)copyright
 {
-	[_copyrightField setStringValue:copyright];
+	_copyright = [copyright copy];
+	[_copyrightField setStringValue:_copyright];
 }
 
-- (NSString *)copyright
-{
-	return [_copyrightField stringValue];
-}
 
+#pragma mark - Website
 
 @synthesize websiteURL = _websiteURL;
 
-
-#pragma mark - Actions
-
 - (IBAction)openWebsite:(id)sender
 {
-	if ( !_websiteURL ) { return; }
-	[[NSWorkspace sharedWorkspace] openURL:_websiteURL];
+	if ( _websiteURL ) { [[NSWorkspace sharedWorkspace] openURL:_websiteURL]; }
 }
 
 - (IBAction)swapVersion:(id)sender
 {
-	_versionAndBuild = !_versionAndBuild;
-	[self updateVersionField];
+	[self setShouldShowVersionAndBuild:!_shouldShowVersionAndBuild];
 }
 
 
@@ -210,27 +261,6 @@ NS_ASSUME_NONNULL_END
 	[outImage unlockFocus];
 
 	return outImage;
-}
-
-- (void)updateVersionField
-{
-	NSString *string = ( _versionAndBuild ) ? [self versionAndBuildString] : [self versionString];
-	[_versionButton setTitle:string];
-	[_versionButton setNeedsDisplay];
-}
-
-- (NSString *)versionString
-{
-	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
-	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
-	return [NSString stringWithFormat:@"%@ %@", label, _version];
-}
-
-- (NSString *)versionAndBuildString
-{
-	NSBundle *bundle = [NSBundle bundleWithIdentifier:@"ca.huxtable.CBHAboutWindow"];
-	NSString *label = NSLocalizedStringFromTableInBundle(@"Version", nil, bundle, @"CBHAboutWindowController::version");
-	return [NSString stringWithFormat:@"%@ %@ (%@)", label, _version, _build];
 }
 
 @end
