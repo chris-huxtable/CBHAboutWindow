@@ -1,0 +1,50 @@
+{
+  "configurations" : [
+    {
+      "id" : "B9F5A2F3-8A4A-4064-8E13-E9C87803E389",
+      "name" : "Behavior",
+      "options" : {
+        "addressSanitizer" : {
+          "detectStackUseAfterReturn" : true,
+          "enabled" : true
+        },
+        "mallocScribbleEnabled" : true,
+        "nsZombieEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "C4A4B9A0-6EC3-4120-84CF-B3B8271D1B57",
+      "name" : "Threading",
+      "options" : {
+        "threadSanitizerEnabled" : true,
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    },
+    {
+      "id" : "6983CD60-7799-48A6-9B0D-EAD9FE567175",
+      "name" : "Memory",
+      "options" : {
+        "guardMallocEnabled" : true,
+        "mallocGuardEdgesEnabled" : true,
+        "mallocStackLoggingOptions" : {
+          "loggingType" : "allAllocations"
+        },
+        "undefinedBehaviorSanitizerEnabled" : true
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "testExecutionOrdering" : "random"
+  },
+  "testTargets" : [
+    {
+      "target" : {
+        "containerPath" : "container:CBHAboutWindow.xcodeproj",
+        "identifier" : "83888D7723A71FE400E53BEE",
+        "name" : "CBHAboutWindowTests"
+      }
+    }
+  ],
+  "version" : 1
+}
