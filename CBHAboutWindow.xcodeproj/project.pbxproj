@@ -9,19 +9,44 @@
 /* Begin PBXBuildFile section */
 		8342EC7323539B860090E7E2 /* _CBHAboutImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 8342EC7123539B860090E7E2 /* _CBHAboutImageView.h */; };
 		8342EC7423539B860090E7E2 /* _CBHAboutImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 8342EC7223539B860090E7E2 /* _CBHAboutImageView.m */; };
+		83888D7D23A71FE500E53BEE /* CBHAboutWindow.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83F40DEF230DA3EF00BE3CA0 /* CBHAboutWindow.framework */; };
+		83888D8423A7203B00E53BEE /* CBHAboutWindowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83888D6B23A71FA200E53BEE /* CBHAboutWindowTests.m */; };
+		83888D8923A729C600E53BEE /* NSBundle+CBHAboutWindowTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 83888D8823A729C600E53BEE /* NSBundle+CBHAboutWindowTests.m */; };
+		83888D8C23A72E7000E53BEE /* NSObject+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 83888D8B23A72E7000E53BEE /* NSObject+Swizzle.m */; };
+		83888D9423A737EE00E53BEE /* NSImage+Scaling.m in Sources */ = {isa = PBXBuildFile; fileRef = 83888D9323A737EE00E53BEE /* NSImage+Scaling.m */; };
 		83F40E00230DA3EF00BE3CA0 /* CBHAboutWindow.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40DF2230DA3EF00BE3CA0 /* CBHAboutWindow.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F40E0C230DA40000BE3CA0 /* CBHAboutWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E09230DA3FF00BE3CA0 /* CBHAboutWindowController.m */; };
 		83F40E0D230DA40000BE3CA0 /* CBHAboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83F40E0A230DA40000BE3CA0 /* CBHAboutWindow.xib */; };
 		83F40E0E230DA40000BE3CA0 /* CBHAboutWindowController.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E0B230DA40000BE3CA0 /* CBHAboutWindowController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83F40E14230DB99300BE3CA0 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 83F40E11230DB99300BE3CA0 /* LICENSE */; };
 		83F40E22230DDF7D00BE3CA0 /* _CBHAboutColorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 83F40E20230DDF7D00BE3CA0 /* _CBHAboutColorView.m */; };
-		83F40E23230DDF7D00BE3CA0 /* _CBHAboutColorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E21230DDF7D00BE3CA0 /* _CBHAboutColorView.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		83F40E23230DDF7D00BE3CA0 /* _CBHAboutColorView.h in Headers */ = {isa = PBXBuildFile; fileRef = 83F40E21230DDF7D00BE3CA0 /* _CBHAboutColorView.h */; };
 		83FEA35C235523090063E519 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 83FEA35E235523090063E519 /* Localizable.strings */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		83888D7E23A71FE500E53BEE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83F40DE6230DA3EF00BE3CA0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 83F40DEE230DA3EF00BE3CA0;
+			remoteInfo = CBHAboutWindow;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		8342EC7123539B860090E7E2 /* _CBHAboutImageView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = _CBHAboutImageView.h; sourceTree = "<group>"; };
 		8342EC7223539B860090E7E2 /* _CBHAboutImageView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = _CBHAboutImageView.m; sourceTree = "<group>"; };
+		83888D6B23A71FA200E53BEE /* CBHAboutWindowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CBHAboutWindowTests.m; sourceTree = "<group>"; };
+		83888D6D23A71FA200E53BEE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		83888D7823A71FE400E53BEE /* CBHAboutWindowTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CBHAboutWindowTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		83888D8723A729C600E53BEE /* NSBundle+CBHAboutWindowTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+CBHAboutWindowTests.h"; sourceTree = "<group>"; };
+		83888D8823A729C600E53BEE /* NSBundle+CBHAboutWindowTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+CBHAboutWindowTests.m"; sourceTree = "<group>"; };
+		83888D8A23A72E7000E53BEE /* NSObject+Swizzle.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSObject+Swizzle.h"; sourceTree = "<group>"; };
+		83888D8B23A72E7000E53BEE /* NSObject+Swizzle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Swizzle.m"; sourceTree = "<group>"; };
+		83888D9223A737EE00E53BEE /* NSImage+Scaling.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSImage+Scaling.h"; sourceTree = "<group>"; };
+		83888D9323A737EE00E53BEE /* NSImage+Scaling.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSImage+Scaling.m"; sourceTree = "<group>"; };
+		83888D9523A739AF00E53BEE /* Correctness.xctestplan */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Correctness.xctestplan; sourceTree = "<group>"; };
 		83F40DEF230DA3EF00BE3CA0 /* CBHAboutWindow.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CBHAboutWindow.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		83F40DF2230DA3EF00BE3CA0 /* CBHAboutWindow.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CBHAboutWindow.h; sourceTree = "<group>"; };
 		83F40DF3230DA3EF00BE3CA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -40,6 +65,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		83888D7523A71FE400E53BEE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83888D7D23A71FE500E53BEE /* CBHAboutWindow.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83F40DEC230DA3EF00BE3CA0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -50,6 +83,36 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		83888D6A23A71FA200E53BEE /* CBHAboutWindowTests */ = {
+			isa = PBXGroup;
+			children = (
+				83888D6B23A71FA200E53BEE /* CBHAboutWindowTests.m */,
+				83888D9123A7351900E53BEE /* Utilities */,
+				83888D6D23A71FA200E53BEE /* Info.plist */,
+			);
+			path = CBHAboutWindowTests;
+			sourceTree = "<group>";
+		};
+		83888D9123A7351900E53BEE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				83888D8723A729C600E53BEE /* NSBundle+CBHAboutWindowTests.h */,
+				83888D8823A729C600E53BEE /* NSBundle+CBHAboutWindowTests.m */,
+				83888D8A23A72E7000E53BEE /* NSObject+Swizzle.h */,
+				83888D8B23A72E7000E53BEE /* NSObject+Swizzle.m */,
+				83888D9223A737EE00E53BEE /* NSImage+Scaling.h */,
+				83888D9323A737EE00E53BEE /* NSImage+Scaling.m */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		83888DA823A742D500E53BEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		83F40DE5230DA3EF00BE3CA0 = {
 			isa = PBXGroup;
 			children = (
@@ -57,8 +120,11 @@
 				83F40E10230DB99300BE3CA0 /* CBHAboutWindow.podspec */,
 				83F40E11230DB99300BE3CA0 /* LICENSE */,
 				83FEA35E235523090063E519 /* Localizable.strings */,
+				83888D9523A739AF00E53BEE /* Correctness.xctestplan */,
 				83F40DF1230DA3EF00BE3CA0 /* CBHAboutWindow */,
+				83888D6A23A71FA200E53BEE /* CBHAboutWindowTests */,
 				83F40DF0230DA3EF00BE3CA0 /* Products */,
+				83888DA823A742D500E53BEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,6 +132,7 @@
 			isa = PBXGroup;
 			children = (
 				83F40DEF230DA3EF00BE3CA0 /* CBHAboutWindow.framework */,
+				83888D7823A71FE400E53BEE /* CBHAboutWindowTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -103,6 +170,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		83888D7723A71FE400E53BEE /* CBHAboutWindowTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83888D8023A71FE500E53BEE /* Build configuration list for PBXNativeTarget "CBHAboutWindowTests" */;
+			buildPhases = (
+				83888D7423A71FE400E53BEE /* Sources */,
+				83888D7523A71FE400E53BEE /* Frameworks */,
+				83888D7623A71FE400E53BEE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				83888D7F23A71FE500E53BEE /* PBXTargetDependency */,
+			);
+			name = CBHAboutWindowTests;
+			productName = CBHAboutWindowTests;
+			productReference = 83888D7823A71FE400E53BEE /* CBHAboutWindowTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		83F40DEE230DA3EF00BE3CA0 /* CBHAboutWindow */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 83F40E03230DA3EF00BE3CA0 /* Build configuration list for PBXNativeTarget "CBHAboutWindow" */;
@@ -127,9 +212,12 @@
 		83F40DE6230DA3EF00BE3CA0 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1100;
+				LastUpgradeCheck = 1130;
 				ORGANIZATIONNAME = "Christian Huxtable";
 				TargetAttributes = {
+					83888D7723A71FE400E53BEE = {
+						CreatedOnToolsVersion = 11.3;
+					};
 					83F40DEE230DA3EF00BE3CA0 = {
 						CreatedOnToolsVersion = 11.0;
 					};
@@ -152,11 +240,19 @@
 			projectRoot = "";
 			targets = (
 				83F40DEE230DA3EF00BE3CA0 /* CBHAboutWindow */,
+				83888D7723A71FE400E53BEE /* CBHAboutWindowTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		83888D7623A71FE400E53BEE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83F40DED230DA3EF00BE3CA0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -170,6 +266,17 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		83888D7423A71FE400E53BEE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83888D9423A737EE00E53BEE /* NSImage+Scaling.m in Sources */,
+				83888D8C23A72E7000E53BEE /* NSObject+Swizzle.m in Sources */,
+				83888D8923A729C600E53BEE /* NSBundle+CBHAboutWindowTests.m in Sources */,
+				83888D8423A7203B00E53BEE /* CBHAboutWindowTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		83F40DEB230DA3EF00BE3CA0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -181,6 +288,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		83888D7F23A71FE500E53BEE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 83F40DEE230DA3EF00BE3CA0 /* CBHAboutWindow */;
+			targetProxy = 83888D7E23A71FE500E53BEE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		83FEA35E235523090063E519 /* Localizable.strings */ = {
@@ -198,6 +313,28 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		83888D8123A71FE500E53BEE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BACZA3W44R;
+				INFOPLIST_FILE = CBHAboutWindowTests/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		83888D8223A71FE500E53BEE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = BACZA3W44R;
+				INFOPLIST_FILE = CBHAboutWindowTests/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindowTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		83F40E01230DA3EF00BE3CA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -258,7 +395,6 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
@@ -291,7 +427,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -391,7 +527,7 @@
 				GCC_WARN_UNUSED_LABEL = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				LLVM_LTO = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				OTHER_CFLAGS = "-Wno-gnu";
@@ -406,8 +542,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CBHAboutWindow/Info.plist;
@@ -416,7 +551,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 			};
@@ -426,8 +561,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 8;
 				DEFINES_MODULE = YES;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CBHAboutWindow/Info.plist;
@@ -436,7 +570,7 @@
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.2.0;
 				PRODUCT_BUNDLE_IDENTIFIER = ca.huxtable.CBHAboutWindow;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 			};
@@ -445,6 +579,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		83888D8023A71FE500E53BEE /* Build configuration list for PBXNativeTarget "CBHAboutWindowTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				83888D8123A71FE500E53BEE /* Debug */,
+				83888D8223A71FE500E53BEE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		83F40DE9230DA3EF00BE3CA0 /* Build configuration list for PBXProject "CBHAboutWindow" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
