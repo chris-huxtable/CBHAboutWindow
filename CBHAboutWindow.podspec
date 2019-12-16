@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name                   = 'CBHAboutWindow'
-  spec.version                = '1.1.0'
+  spec.version                = '1.2.0'
   spec.module_name            = 'CBHAboutWindow'
 
   spec.summary                = 'A fancier about window.'
@@ -12,7 +12,7 @@ Pod::Spec.new do |spec|
   spec.author                 = { 'Chris Huxtable' => 'chris@huxtable.ca' }
   spec.social_media_url       = 'https://twitter.com/@Chris_Huxtable'
 
-  spec.osx.deployment_target  = '10.10'
+  spec.osx.deployment_target  = '10.11'
 
   spec.source                 = { :git => 'https://github.com/chris-huxtable/CBHAboutWindow.git', :tag => "v#{spec.version}" }
 
