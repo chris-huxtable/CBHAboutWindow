@@ -2,10 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CBHAboutAuthor</key>
-	<string>Designed &amp; Written by Chris Huxtable</string>
-	<key>CBHAboutWebsite</key>
-	<string>https://huxtable.ca/</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -15,7 +11,7 @@
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>
-	<string>CBHAboutWindowTests</string>
+	<string>$(PRODUCT_NAME)</string>
 	<key>CFBundlePackageType</key>
 	<string>$(PRODUCT_BUNDLE_PACKAGE_TYPE)</string>
 	<key>CFBundleShortVersionString</key>
@@ -24,5 +20,9 @@
 	<string>2</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2019 Christian Huxtable. All rights reserved.</string>
+	<key>CBHAboutAuthor</key>
+	<string>Designed &amp; Written by Chris Huxtable</string>
+	<key>CBHAboutWebsite</key>
+	<string>https://huxtable.ca/</string>
 </dict>
 </plist>

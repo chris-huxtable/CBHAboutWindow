@@ -106,13 +106,6 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
-		83888DA823A742D500E53BEE /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		83F40DE5230DA3EF00BE3CA0 = {
 			isa = PBXGroup;
 			children = (
@@ -124,7 +117,6 @@
 				83F40DF1230DA3EF00BE3CA0 /* CBHAboutWindow */,
 				83888D6A23A71FA200E53BEE /* CBHAboutWindowTests */,
 				83F40DF0230DA3EF00BE3CA0 /* Products */,
-				83888DA823A742D500E53BEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -391,7 +383,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -434,7 +425,7 @@
 				OTHER_CFLAGS = "-Wno-gnu";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
@@ -495,7 +486,6 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CLANG_WARN__EXIT_TIME_DESTRUCTORS = YES;
 				CODE_SIGN_IDENTITY = "Mac Developer";
-				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_NS_ASSERTIONS = NO;
@@ -533,7 +523,7 @@
 				OTHER_CFLAGS = "-Wno-gnu";
 				RUN_CLANG_STATIC_ANALYZER = YES;
 				SDKROOT = macosx;
-				VERSIONING_SYSTEM = "apple-generic";
+				VERSIONING_SYSTEM = "";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Release;
