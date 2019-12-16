@@ -27,4 +27,4 @@ CBHAboutWindowController *controller = [CBHAboutWindowController controller];
 
 
 ## Licence
-CBHWindowManager is available under the [ISC license](https://github.com/chris-huxtable/CBHWindowManager/blob/master/LICENSE).
+CBHAboutWindow is available under the [ISC license](https://github.com/chris-huxtable/CBHAboutWindow/blob/master/LICENSE).
