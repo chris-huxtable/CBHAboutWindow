@@ -1,6 +1,3 @@
-<p align="center">
-  <img src="https://user-images.githubusercontent.com/2386387/70958341-f21ce180-2046-11ea-9197-7bea3dd1178e.png">
-</p>
 
 # CBHAboutWindow
 
@@ -10,6 +7,14 @@
 [![coverage](https://img.shields.io/badge/coverage-95%25-brightgreen.svg?cacheSeconds=2592000)](https://github.com/chris-huxtable/CBHAboutWindow)
 
 A fancier about window. Designed for my ease-of-use, but flexible enough for anyone.
+
+
+## Screenshot
+
+<p align="center">
+  <img src="https://user-images.githubusercontent.com/2386387/70958341-f21ce180-2046-11ea-9197-7bea3dd1178e.png">
+</p>
+
 
 ## Examples:
 
